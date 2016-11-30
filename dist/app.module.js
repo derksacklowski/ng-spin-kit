@@ -11,7 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var app_component_1 = require('./app.component');
-var spinner = require('./spinners');
+var spinners_1 = require('./spinners');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -22,18 +22,18 @@ var AppModule = (function () {
             ],
             declarations: [
                 app_component_1.AppComponent,
-                spinner.RotatingPlaneComponent,
-                spinner.DoubleBounceComponent,
-                spinner.WaveComponent,
-                spinner.WanderingCubesComponent,
-                spinner.PulseComponent,
-                spinner.ChasingDotsComponent,
-                spinner.CircleComponent,
-                spinner.ThreeBounceComponent,
-                spinner.CubeGridComponent,
-                spinner.WordPressComponent,
-                spinner.FadingCircleComponent,
-                spinner.FoldingCubeComponent
+                spinners_1.RotatingPlaneComponent,
+                spinners_1.DoubleBounceComponent,
+                spinners_1.WaveComponent,
+                spinners_1.WanderingCubesComponent,
+                spinners_1.PulseComponent,
+                spinners_1.ChasingDotsComponent,
+                spinners_1.CircleComponent,
+                spinners_1.ThreeBounceComponent,
+                spinners_1.CubeGridComponent,
+                spinners_1.WordPressComponent,
+                spinners_1.FadingCircleComponent,
+                spinners_1.FoldingCubeComponent
             ],
             bootstrap: [
                 app_component_1.AppComponent
