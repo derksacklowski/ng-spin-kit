@@ -23,3 +23,4 @@ var fading_circle_1 = require('./spinner/fading-circle');
 exports.FadingCircleComponent = fading_circle_1.FadingCircleComponent;
 var folding_cube_1 = require('./spinner/folding-cube');
 exports.FoldingCubeComponent = folding_cube_1.FoldingCubeComponent;
+//# sourceMappingURL=spinners.js.map

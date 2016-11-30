@@ -51,7 +51,6 @@ var PulseComponent = (function () {
     ], PulseComponent.prototype, "isRunning", null);
     PulseComponent = __decorate([
         core_1.Component({
-            moduleId: module.id,
             selector: 'sk-pulse',
             styles: ["\n    .pulse-spinner {\n      margin: 25px auto;\n      width: 40px;\n      height: 40px;\n      border-radius: 100%;\n    \n      background-color: #333;\n      -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;\n      animation: sk-scaleout 1.0s infinite ease-in-out;\n    }\n    \n    @-webkit-keyframes sk-scaleout {\n      0% {\n        -webkit-transform: scale(0)\n      }\n      100% {\n        -webkit-transform: scale(1.0);\n        opacity: 0;\n      }\n    }\n    \n    @keyframes sk-scaleout {\n      0% {\n        -webkit-transform: scale(0);\n        transform: scale(0);\n      }\n      100% {\n        -webkit-transform: scale(1.0);\n        transform: scale(1.0);\n        opacity: 0;\n      }\n    }\n  "],
             template: "\n    <div [hidden]=\"!visible\" class=\"pulse-spinner\"></div>\n  "
@@ -61,3 +60,4 @@ var PulseComponent = (function () {
     return PulseComponent;
 }());
 exports.PulseComponent = PulseComponent;
+//# sourceMappingURL=pulse.js.map
