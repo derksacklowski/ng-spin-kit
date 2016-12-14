@@ -10,17 +10,17 @@ Inspired by angular-spinkit (https://github.com/Urigo/angular-spinkit)
 ## Usage
 1. Install with NPM:
   ```bash
-  npm install ng2-spin-kit --save
+  npm install ng-spin-kit --save
   ```
 
 2. Import one component
   ```javascript
-  import { RotatingPlaneComponent } from 'ng2-spin-kit/app/spinner/rotating-plane.component'
+  import { RotatingPlaneComponent } from 'ng-spin-kit/app/spinner/rotating-plane.component'
   ```
 
 3. or all of them
   ```javascript
-  import * as spinner from 'ng2-spin-kit/app/spinners'
+  import * as spinner from 'ng-spin-kit/app/spinners'
   ```
   
 4. Use it:
@@ -78,7 +78,7 @@ Inspired by angular-spinkit (https://github.com/Urigo/angular-spinkit)
   import { BrowserModule } from '@angular/platform-browser';
   
   import { AppComponent } from './app.component';
-  import * as spinner from 'ng2-spin-kit/app/spinners';
+  import * as spinner from 'ng-spin-kit/app/spinners';
   
   @Component({
     imports: [

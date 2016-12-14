@@ -21,7 +21,7 @@ import { Component, OnInit } from '@angular/core';
   `],
   template: `
     <div class="wrapper">
-      <h1>ng2-spin-kit</h1>
+      <h1>ng-spin-kit</h1>
     
       <h3>rotating-plane</h3>
       <sk-rotating-plane></sk-rotating-plane>

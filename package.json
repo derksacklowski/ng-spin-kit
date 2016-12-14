@@ -1,15 +1,15 @@
 {
-  "name": "ng2-spin-kit",
+  "name": "ng-spin-kit",
   "version": "1.3.0",
   "description": "SpinKit (http://tobiasahlin.com/spinkit/) spinners for AngularJS 2.x",
   "repository": {
     "type": "git",
-    "url": "https://github.com/WoltersKluwerPL/ng2-spin-kit"
+    "url": "https://github.com/WoltersKluwerPL/ng-spin-kit"
   },
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/WoltersKluwerPL/ng2-spin-kit/blob/master/LICENSE"
+      "url": "https://github.com/WoltersKluwerPL/ng-spin-kit/blob/master/LICENSE"
     }
   ],
   "scripts": {
