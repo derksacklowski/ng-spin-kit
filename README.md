@@ -1,11 +1,11 @@
-ng2-spin-kit
+ng-spin-kit
 ===============
 
 SpinKit (https://github.com/tobiasahlin/SpinKit) spinners for AngularJS v2.x
 
 Inspired by angular-spinkit (https://github.com/Urigo/angular-spinkit)
 
-![ng2-spin-kit](ng2-spin-kit.gif?raw=true "ng2-spin-kit")
+![ng-spin-kit](ng-spin-kit.gif?raw=true "ng-spin-kit")
 
 ## Usage
 1. Install with NPM:
