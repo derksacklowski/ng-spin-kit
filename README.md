@@ -1,7 +1,7 @@
 ng-spin-kit
 ===============
 
-SpinKit (https://github.com/tobiasahlin/SpinKit) spinners for AngularJS v2.x
+SpinKit (https://github.com/tobiasahlin/SpinKit) spinners for Angular 2+
 
 Inspired by angular-spinkit (https://github.com/Urigo/angular-spinkit)
 
