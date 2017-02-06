@@ -15,15 +15,10 @@ Inspired by angular-spinkit (https://github.com/Urigo/angular-spinkit)
 
 2. Import one component
   ```javascript
-  import { RotatingPlaneComponent } from 'ng-spin-kit/app/spinner/rotating-plane.component'
+  import { NgSpinKitModule } from 'ng-spin-kit'
   ```
 
-3. or all of them
-  ```javascript
-  import * as spinner from 'ng-spin-kit/app/spinners'
-  ```
-  
-4. Use it:
+3. Use it:
   ```javascript
   // app.component.ts
   
@@ -78,26 +73,15 @@ Inspired by angular-spinkit (https://github.com/Urigo/angular-spinkit)
   import { BrowserModule } from '@angular/platform-browser';
   
   import { AppComponent } from './app.component';
-  import * as spinner from 'ng-spin-kit/app/spinners';
+  import { NgSpinKitModule } from 'ng-spin-kit';
   
   @Component({
     imports: [
-      BrowserModule
+      BrowserModule,
+      NgSpinKitModule
     ],
     declarations: [
       AppComponent,
-      spinner.RotatingPlaneComponent,
-      spinner.DoubleBounceComponent,
-      spinner.WaveComponent,
-      spinner.WanderingCubesComponent,
-      spinner.PulseComponent,
-      spinner.ChasingDotsComponent,
-      spinner.CircleComponent,
-      spinner.ThreeBounceComponent,
-      spinner.CubeGridComponent,
-      spinner.WordPressComponent,
-      spinner.FadingCircleComponent,
-      spinner.FoldingCubeComponent
     ],
     bootstrap: [
       AppComponent
