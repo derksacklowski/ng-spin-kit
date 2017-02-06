@@ -41,10 +41,10 @@ const NG_SPIN_KIT_COMPONENTS = [
   WordPressComponent,
   FadingCircleComponent,
   FoldingCubeComponent
-]
+];
 
 @NgModule({
-    declarations: NG_SPIN_KIT_COMPONENTS,
-    exports: NG_SPIN_KIT_COMPONENTS,
+  declarations: NG_SPIN_KIT_COMPONENTS,
+  exports: NG_SPIN_KIT_COMPONENTS,
 })
-export class NgSpinKitModule { }
+export class NgSpinKitModule {}
