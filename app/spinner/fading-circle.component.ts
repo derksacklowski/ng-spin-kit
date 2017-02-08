@@ -17,6 +17,7 @@ import { SpinnerComponent, SpinnerTemplate } from './spinner.component';
       left: 0;
       width: 100%;
       height: 100%;
+      background-color: transparent !important;
     }
     
     .fading-circle-spinner div:before {
@@ -170,22 +171,7 @@ import { SpinnerComponent, SpinnerTemplate } from './spinner.component';
       }
     }
   `],
-  template: `
-    <div [hidden]="!visible" class="fading-circle-spinner">
-      <div class="circle1 circle"></div>
-      <div class="circle2 circle"></div>
-      <div class="circle3 circle"></div>
-      <div class="circle4 circle"></div>
-      <div class="circle5 circle"></div>
-      <div class="circle6 circle"></div>
-      <div class="circle7 circle"></div>
-      <div class="circle8 circle"></div>
-      <div class="circle9 circle"></div>
-      <div class="circle10 circle"></div>
-      <div class="circle11 circle"></div>
-      <div class="circle12 circle"></div>
-    </div>
-  `
+  template: SpinnerTemplate
 })
 
 export class FadingCircleComponent extends SpinnerComponent {

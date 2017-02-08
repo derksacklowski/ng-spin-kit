@@ -7,12 +7,16 @@ import { Component, Input, OnDestroy } from "@angular/core";
 export class SpinnerComponent implements OnDestroy {
     private visible: boolean = true;
     private timeout: any;
+
     public baseClass: string = 'chasing-dots-spinner';
     public childClass: string = 'dot';
     public numItems: number = 2;
 
     @Input()
     public delay: number = 0;
+
+    @Input()
+    public color: string = '#333';
 
     @Input()
     public set isRunning(value: boolean) {
@@ -48,6 +52,6 @@ export class SpinnerComponent implements OnDestroy {
 
 export const SpinnerTemplate = `
   <div [hidden]="!visible" [ngClass]="baseClass">
-      <div *ngFor="let item of items; let i = index" [ngClass]="childClass + (i+1)"></div>
+      <div *ngFor="let item of items; let i = index" [ngClass]="childClass + (i+1)" [style.backgroundColor]="color"></div>
   </div>
 `;

@@ -10,7 +10,6 @@ import { SpinnerComponent, SpinnerTemplate } from './spinner.component';
       height: 40px;
       border-radius: 100%;
     
-      background-color: #333;
       -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
       animation: sk-scaleout 1.0s infinite ease-in-out;
     }
@@ -38,7 +37,7 @@ import { SpinnerComponent, SpinnerTemplate } from './spinner.component';
     }
   `],
   template: `
-    <div [hidden]="!visible" class="pulse-spinner"></div>
+    <div [hidden]="!visible" class="pulse-spinner" [style.backgroundColor]="color"></div>
   `
 })
 

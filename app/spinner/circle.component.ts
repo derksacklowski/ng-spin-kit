@@ -11,12 +11,13 @@ import { SpinnerComponent, SpinnerTemplate } from './spinner.component';
       height: 40px;
     }
     
-    .circle-spinner div {
+    .circle-spinner > div {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
+      background-color: transparent !important;
     }
     
     .circle-spinner div:before {

@@ -19,6 +19,7 @@ import { SpinnerComponent, SpinnerTemplate } from './spinner.component';
       float: left;
       width: 50%;
       height: 50%;
+      background-color: transparent !important;
       -webkit-transform: scale(1.1);
       -ms-transform: scale(1.1);
       transform: scale(1.1);

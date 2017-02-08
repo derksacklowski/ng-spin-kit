@@ -8,7 +8,6 @@ import { SpinnerComponent, SpinnerTemplate } from './spinner.component';
       margin: 25px auto;
       width: 40px;
       height: 40px;
-      background-color: #333;
     
       -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
       animation: sk-rotateplane 1.2s infinite ease-in-out;
@@ -42,7 +41,7 @@ import { SpinnerComponent, SpinnerTemplate } from './spinner.component';
     }
   `],
   template: `
-    <div [hidden]="!visible" class="rotating-plane-spinner"></div>
+    <div [hidden]="!visible" class="rotating-plane-spinner" [style.backgroundColor]="color"></div>
   `
 })
 

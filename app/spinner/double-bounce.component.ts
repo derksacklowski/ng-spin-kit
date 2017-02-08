@@ -19,7 +19,6 @@ import { SpinnerComponent, SpinnerTemplate } from './spinner.component';
       width: 100%;
       height: 100%;
       border-radius: 50%;
-      background-color: #333;
       opacity: 0.6;
     
       -webkit-animation: sk-bounce 2.0s infinite ease-in-out;

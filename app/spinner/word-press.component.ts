@@ -10,7 +10,6 @@ import { SpinnerComponent, SpinnerTemplate } from './spinner.component';
       width: 30px;
       height: 30px;
       border-radius: 30px;
-      background-color: #333;
     
       -webkit-animation: inner-circle 1s linear infinite;
       animation: inner-circle 1s linear infinite;
@@ -48,7 +47,7 @@ import { SpinnerComponent, SpinnerTemplate } from './spinner.component';
     }
   `],
   template: `
-    <div [hidden]="!visible" class="word-press-spinner">
+    <div [hidden]="!visible" class="word-press-spinner" [style.backgroundColor]="color">
       <span class="inner-circle"></span>
     </div>
   `

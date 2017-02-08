@@ -15,7 +15,6 @@ import { SpinnerComponent, SpinnerTemplate } from './spinner.component';
       height: 18px;
     
       border-radius: 100%;
-      background-color: #333;
       -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
       animation: sk-bouncedelay 1.4s infinite ease-in-out both;
     }

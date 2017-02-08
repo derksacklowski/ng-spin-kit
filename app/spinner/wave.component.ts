@@ -15,7 +15,6 @@ import { SpinnerComponent, SpinnerTemplate } from './spinner.component';
       width: 5px;
       margin-right: 4px;
       height: 100%;
-      background-color: #333;
     
       -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
       animation: sk-stretchdelay 1.2s infinite ease-in-out;
