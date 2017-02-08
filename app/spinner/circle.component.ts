@@ -1,4 +1,5 @@
-import { Component, Input, OnDestroy } from "@angular/core";
+import { Component } from "@angular/core";
+import { SpinnerComponent, SpinnerTemplate } from './spinner.component';
 
 @Component({
   selector: 'sk-circle',
@@ -10,7 +11,7 @@ import { Component, Input, OnDestroy } from "@angular/core";
       height: 40px;
     }
     
-    .circle-spinner .sk-child {
+    .circle-spinner div {
       position: absolute;
       top: 0;
       left: 0;
@@ -18,7 +19,7 @@ import { Component, Input, OnDestroy } from "@angular/core";
       height: 100%;
     }
     
-    .circle-spinner .sk-child:before {
+    .circle-spinner div:before {
       display: block;
       margin: 0 auto;
       width: 15%;
@@ -173,55 +174,11 @@ import { Component, Input, OnDestroy } from "@angular/core";
       }
     }
   `],
-  template: `
-    <div [hidden]="!visible" class="circle-spinner">
-      <div class="circle1 sk-child"></div>
-      <div class="circle2 sk-child"></div>
-      <div class="circle3 sk-child"></div>
-      <div class="circle4 sk-child"></div>
-      <div class="circle5 sk-child"></div>
-      <div class="circle6 sk-child"></div>
-      <div class="circle7 sk-child"></div>
-      <div class="circle8 sk-child"></div>
-      <div class="circle9 sk-child"></div>
-      <div class="circle10 sk-child"></div>
-      <div class="circle11 sk-child"></div>
-      <div class="circle12 sk-child"></div>
-    </div>
-  `
+  template: SpinnerTemplate
 })
 
-export class CircleComponent implements OnDestroy {
-  private visible: boolean = true;
-  private timeout: any;
-
-  @Input()
-  public delay: number = 0;
-
-  @Input()
-  public set isRunning(value: boolean) {
-    if (!value) {
-      this.cancel();
-      this.visible = false;
-      return;
-    }
-
-    if (this.timeout) {
-      return;
-    }
-
-    this.timeout = setTimeout(() => {
-      this.visible = true;
-      this.cancel();
-    }, this.delay);
-  }
-
-  private cancel(): void {
-    clearTimeout(this.timeout);
-    this.timeout = undefined;
-  }
-
-  ngOnDestroy(): any {
-    this.cancel();
-  }
+export class CircleComponent extends SpinnerComponent {
+  public baseClass: string = 'circle-spinner';
+  public childClass: string = 'circle';
+  public numItems: number = 12;
 }

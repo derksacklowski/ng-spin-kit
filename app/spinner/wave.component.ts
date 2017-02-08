@@ -1,4 +1,5 @@
-import { Component, Input, OnDestroy } from "@angular/core";
+import { Component } from "@angular/core";
+import { SpinnerComponent, SpinnerTemplate } from './spinner.component';
 
 @Component({
   selector: 'sk-wave',
@@ -12,6 +13,7 @@ import { Component, Input, OnDestroy } from "@angular/core";
     .wave-spinner > div {
       display: inline-block;
       width: 5px;
+      margin-right: 4px;
       height: 100%;
       background-color: #333;
     
@@ -19,6 +21,10 @@ import { Component, Input, OnDestroy } from "@angular/core";
       animation: sk-stretchdelay 1.2s infinite ease-in-out;
     }
     
+    .wave-spinner > div:last-child {
+      margin-right: 0;
+    }
+
     .wave-spinner .rect2 {
       -webkit-animation-delay: -1.1s;
       animation-delay: -1.1s;
@@ -59,48 +65,11 @@ import { Component, Input, OnDestroy } from "@angular/core";
       }
     }
   `],
-  template: `
-    <div [hidden]="!visible" class="wave-spinner">
-      <div class="rect1"></div>
-      <div class="rect2"></div>
-      <div class="rect3"></div>
-      <div class="rect4"></div>
-      <div class="rect5"></div>
-    </div>
-  `
+  template: SpinnerTemplate
 })
 
-export class WaveComponent implements OnDestroy {
-  private visible: boolean = true;
-  private timeout: any;
-
-  @Input()
-  public delay: number = 0;
-
-  @Input()
-  public set isRunning(value: boolean) {
-    if (!value) {
-      this.cancel();
-      this.visible = false;
-      return;
-    }
-
-    if (this.timeout) {
-      return;
-    }
-
-    this.timeout = setTimeout(() => {
-      this.visible = true;
-      this.cancel();
-    }, this.delay);
-  }
-
-  private cancel(): void {
-    clearTimeout(this.timeout);
-    this.timeout = undefined;
-  }
-
-  ngOnDestroy(): any {
-    this.cancel();
-  }
+export class WaveComponent extends SpinnerComponent {
+  public baseClass: string = 'wave-spinner';
+  public childClass: string = 'rect';
+  public numItems: number = 5;
 }

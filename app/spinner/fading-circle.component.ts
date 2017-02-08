@@ -1,4 +1,5 @@
-import { Component, Input, OnDestroy } from "@angular/core";
+import { Component } from "@angular/core";
+import { SpinnerComponent, SpinnerTemplate } from './spinner.component';
 
 @Component({
   selector: 'sk-fading-circle',
@@ -10,7 +11,7 @@ import { Component, Input, OnDestroy } from "@angular/core";
       height: 40px;
     }
     
-    .fading-circle-spinner .circle {
+    .fading-circle-spinner div {
       position: absolute;
       top: 0;
       left: 0;
@@ -18,7 +19,7 @@ import { Component, Input, OnDestroy } from "@angular/core";
       height: 100%;
     }
     
-    .fading-circle-spinner .circle:before {
+    .fading-circle-spinner div:before {
       display: block;
       margin: 0 auto;
       width: 15%;
@@ -187,37 +188,8 @@ import { Component, Input, OnDestroy } from "@angular/core";
   `
 })
 
-export class FadingCircleComponent implements OnDestroy {
-  private visible: boolean = true;
-  private timeout: any;
-
-  @Input()
-  public delay: number = 0;
-
-  @Input()
-  public set isRunning(value: boolean) {
-    if (!value) {
-      this.cancel();
-      this.visible = false;
-      return;
-    }
-
-    if (this.timeout) {
-      return;
-    }
-
-    this.timeout = setTimeout(() => {
-      this.visible = true;
-      this.cancel();
-    }, this.delay);
-  }
-
-  private cancel(): void {
-    clearTimeout(this.timeout);
-    this.timeout = undefined;
-  }
-
-  ngOnDestroy(): any {
-    this.cancel();
-  }
+export class FadingCircleComponent extends SpinnerComponent {
+  public baseClass: string = 'fading-circle-spinner';
+  public childClass: string = 'circle';
+  public numItems: number = 12;
 }

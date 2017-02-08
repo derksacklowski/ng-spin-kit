@@ -1,4 +1,5 @@
-import { Component, Input, OnDestroy } from "@angular/core";
+import { Component } from "@angular/core";
+import { SpinnerComponent, SpinnerTemplate } from './spinner.component';
 
 @Component({
   selector: 'sk-folding-cube',
@@ -13,7 +14,7 @@ import { Component, Input, OnDestroy } from "@angular/core";
       transform: rotateZ(45deg);
     }
     
-    .folding-cube-spinner .cube {
+    .folding-cube-spinner div {
       position: relative;
       float: left;
       width: 50%;
@@ -23,7 +24,7 @@ import { Component, Input, OnDestroy } from "@angular/core";
       transform: scale(1.1);
     }
     
-    .folding-cube-spinner .cube:before {
+    .folding-cube-spinner div:before {
       position: absolute;
       top: 0;
       left: 0;
@@ -43,12 +44,12 @@ import { Component, Input, OnDestroy } from "@angular/core";
       transform: scale(1.1) rotateZ(90deg);
     }
     
-    .folding-cube-spinner .cube3 {
+    .folding-cube-spinner .cube4 {
       -webkit-transform: scale(1.1) rotateZ(180deg);
       transform: scale(1.1) rotateZ(180deg);
     }
     
-    .folding-cube-spinner .cube4 {
+    .folding-cube-spinner .cube3 {
       -webkit-transform: scale(1.1) rotateZ(270deg);
       transform: scale(1.1) rotateZ(270deg);
     }
@@ -58,12 +59,12 @@ import { Component, Input, OnDestroy } from "@angular/core";
       animation-delay: 0.3s;
     }
     
-    .folding-cube-spinner .cube3:before {
+    .folding-cube-spinner .cube4:before {
       -webkit-animation-delay: 0.6s;
       animation-delay: 0.6s;
     }
     
-    .folding-cube-spinner .cube4:before {
+    .folding-cube-spinner .cube3:before {
       -webkit-animation-delay: 0.9s;
       animation-delay: 0.9s;
     }
@@ -104,47 +105,11 @@ import { Component, Input, OnDestroy } from "@angular/core";
       }
     }
   `],
-  template: `
-    <div [hidden]="!visible" class="folding-cube-spinner">
-      <div class="cube1 cube"></div>
-      <div class="cube2 cube"></div>
-      <div class="cube4 cube"></div>
-      <div class="cube3 cube"></div>
-    </div>
-  `
+  template: SpinnerTemplate
 })
 
-export class FoldingCubeComponent implements OnDestroy {
-  private visible: boolean = true;
-  private timeout: any;
-
-  @Input()
-  public delay: number = 0;
-
-  @Input()
-  public set isRunning(value: boolean) {
-    if (!value) {
-      this.cancel();
-      this.visible = false;
-      return;
-    }
-
-    if (this.timeout) {
-      return;
-    }
-
-    this.timeout = setTimeout(() => {
-      this.visible = true;
-      this.cancel();
-    }, this.delay);
-  }
-
-  private cancel(): void {
-    clearTimeout(this.timeout);
-    this.timeout = undefined;
-  }
-
-  ngOnDestroy(): any {
-    this.cancel();
-  }
+export class FoldingCubeComponent extends SpinnerComponent {
+  public baseClass: string = 'folding-cube-spinner';
+  public childClass: string = 'cube';
+  public numItems: number = 4;
 }
