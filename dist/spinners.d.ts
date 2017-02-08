@@ -1,3 +1,4 @@
+import { SpinnerComponent } from './spinner/spinner.component';
 import { RotatingPlaneComponent } from './spinner/rotating-plane.component';
 import { DoubleBounceComponent } from './spinner/double-bounce.component';
 import { WaveComponent } from './spinner/wave.component';
@@ -10,6 +11,6 @@ import { CubeGridComponent } from './spinner/cube-grid.component';
 import { WordPressComponent } from './spinner/word-press.component';
 import { FadingCircleComponent } from './spinner/fading-circle.component';
 import { FoldingCubeComponent } from './spinner/folding-cube.component';
-export { RotatingPlaneComponent, DoubleBounceComponent, WaveComponent, WanderingCubesComponent, PulseComponent, ChasingDotsComponent, CircleComponent, ThreeBounceComponent, CubeGridComponent, WordPressComponent, FadingCircleComponent, FoldingCubeComponent };
+export { SpinnerComponent, RotatingPlaneComponent, DoubleBounceComponent, WaveComponent, WanderingCubesComponent, PulseComponent, ChasingDotsComponent, CircleComponent, ThreeBounceComponent, CubeGridComponent, WordPressComponent, FadingCircleComponent, FoldingCubeComponent };
 export declare class NgSpinKitModule {
 }

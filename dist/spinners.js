@@ -6,6 +6,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var core_1 = require("@angular/core");
+var platform_browser_1 = require("@angular/platform-browser");
+var spinner_component_1 = require("./spinner/spinner.component");
+exports.SpinnerComponent = spinner_component_1.SpinnerComponent;
 var rotating_plane_component_1 = require("./spinner/rotating-plane.component");
 exports.RotatingPlaneComponent = rotating_plane_component_1.RotatingPlaneComponent;
 var double_bounce_component_1 = require("./spinner/double-bounce.component");
@@ -31,6 +34,7 @@ exports.FadingCircleComponent = fading_circle_component_1.FadingCircleComponent;
 var folding_cube_component_1 = require("./spinner/folding-cube.component");
 exports.FoldingCubeComponent = folding_cube_component_1.FoldingCubeComponent;
 var NG_SPIN_KIT_COMPONENTS = [
+    spinner_component_1.SpinnerComponent,
     rotating_plane_component_1.RotatingPlaneComponent,
     double_bounce_component_1.DoubleBounceComponent,
     wave_component_1.WaveComponent,
@@ -51,6 +55,9 @@ var NgSpinKitModule = (function () {
 }());
 NgSpinKitModule = __decorate([
     core_1.NgModule({
+        imports: [
+            platform_browser_1.BrowserModule
+        ],
         declarations: NG_SPIN_KIT_COMPONENTS,
         exports: NG_SPIN_KIT_COMPONENTS,
     })
