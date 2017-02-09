@@ -27,16 +27,16 @@ import { Component, OnInit } from '@angular/core';
       <sk-rotating-plane></sk-rotating-plane>
     
       <h3>double-bounce</h3>
-      <sk-double-bounce></sk-double-bounce>
+      <sk-double-bounce [color]="'green'"></sk-double-bounce>
     
       <h3>wave</h3>
-      <sk-wave></sk-wave>
+      <sk-wave [color]="'#00688B'"></sk-wave>
     
       <h3>wandering-cubes</h3>
       <sk-wandering-cubes></sk-wandering-cubes>
     
       <h3>pulse</h3>
-      <sk-pulse></sk-pulse>
+      <sk-pulse [color]="'red'"></sk-pulse>
     
       <h3>chasing-dots</h3>
       <sk-chasing-dots></sk-chasing-dots>

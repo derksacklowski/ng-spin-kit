@@ -1,4 +1,5 @@
-import { Component, Input, OnDestroy } from "@angular/core";
+import { Component } from "@angular/core";
+import { SpinnerComponent, SpinnerTemplate } from './spinner.component';
 
 @Component({
   selector: 'sk-double-bounce',
@@ -18,7 +19,6 @@ import { Component, Input, OnDestroy } from "@angular/core";
       width: 100%;
       height: 100%;
       border-radius: 50%;
-      background-color: #333;
       opacity: 0.6;
     
       -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
@@ -50,45 +50,11 @@ import { Component, Input, OnDestroy } from "@angular/core";
       }
     }
   `],
-  template: `
-    <div [hidden]="!visible" class="double-bounce-spinner">
-      <div class="double-bounce1"></div>
-      <div class="double-bounce2"></div>
-    </div>
-  `
+  template: SpinnerTemplate
 })
 
-export class DoubleBounceComponent implements OnDestroy {
-  private visible: boolean = true;
-  private timeout: any;
-
-  @Input()
-  public delay: number = 0;
-
-  @Input()
-  public set isRunning(value: boolean) {
-    if (!value) {
-      this.cancel();
-      this.visible = false;
-      return;
-    }
-
-    if (this.timeout) {
-      return;
-    }
-
-    this.timeout = setTimeout(() => {
-      this.visible = true;
-      this.cancel();
-    }, this.delay);
-  }
-
-  private cancel(): void {
-    clearTimeout(this.timeout);
-    this.timeout = undefined;
-  }
-
-  ngOnDestroy(): any {
-    this.cancel();
-  }
+export class DoubleBounceComponent extends SpinnerComponent {
+  public baseClass: string = 'double-bounce-spinner';
+  public childClass: string = 'double-bounce';
+  public numItems: number = 2;
 }

@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 
+import { SpinnerComponent } from './spinner/spinner.component'
 import { RotatingPlaneComponent } from './spinner/rotating-plane.component'
 import { DoubleBounceComponent } from './spinner/double-bounce.component'
 import { WaveComponent } from './spinner/wave.component'
@@ -14,6 +16,7 @@ import { FadingCircleComponent } from './spinner/fading-circle.component'
 import { FoldingCubeComponent } from './spinner/folding-cube.component'
 
 export {
+  SpinnerComponent,
   RotatingPlaneComponent,
   DoubleBounceComponent,
   WaveComponent,
@@ -29,6 +32,7 @@ export {
 };
 
 const NG_SPIN_KIT_COMPONENTS = [
+  SpinnerComponent,
   RotatingPlaneComponent,
   DoubleBounceComponent,
   WaveComponent,
@@ -44,6 +48,9 @@ const NG_SPIN_KIT_COMPONENTS = [
 ];
 
 @NgModule({
+  imports: [
+    BrowserModule
+  ],
   declarations: NG_SPIN_KIT_COMPONENTS,
   exports: NG_SPIN_KIT_COMPONENTS,
 })

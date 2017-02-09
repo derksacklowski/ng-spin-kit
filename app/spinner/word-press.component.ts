@@ -1,4 +1,5 @@
-import { Component, Input, OnDestroy } from "@angular/core";
+import { Component } from "@angular/core";
+import { SpinnerComponent, SpinnerTemplate } from './spinner.component';
 
 @Component({
   selector: 'sk-word-press',
@@ -9,7 +10,6 @@ import { Component, Input, OnDestroy } from "@angular/core";
       width: 30px;
       height: 30px;
       border-radius: 30px;
-      background-color: #333;
     
       -webkit-animation: inner-circle 1s linear infinite;
       animation: inner-circle 1s linear infinite;
@@ -47,43 +47,12 @@ import { Component, Input, OnDestroy } from "@angular/core";
     }
   `],
   template: `
-    <div [hidden]="!visible" class="word-press-spinner">
+    <div [hidden]="!visible" class="word-press-spinner" [style.backgroundColor]="color">
       <span class="inner-circle"></span>
     </div>
   `
 })
 
-export class WordPressComponent implements OnDestroy {
-  private visible: boolean = true;
-  private timeout: any;
+export class WordPressComponent extends SpinnerComponent {
 
-  @Input()
-  public delay: number = 0;
-
-  @Input()
-  public set isRunning(value: boolean) {
-    if (!value) {
-      this.cancel();
-      this.visible = false;
-      return;
-    }
-
-    if (this.timeout) {
-      return;
-    }
-
-    this.timeout = setTimeout(() => {
-      this.visible = true;
-      this.cancel();
-    }, this.delay);
-  }
-
-  private cancel(): void {
-    clearTimeout(this.timeout);
-    this.timeout = undefined;
-  }
-
-  ngOnDestroy(): any {
-    this.cancel();
-  }
 }

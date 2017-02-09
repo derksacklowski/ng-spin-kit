@@ -1,61 +1,33 @@
 "use strict";
+var __extends = (this && this.__extends) || function (d, b) {
+    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+    function __() { this.constructor = d; }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+};
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
 var core_1 = require("@angular/core");
-var DoubleBounceComponent = (function () {
+var spinner_component_1 = require("./spinner.component");
+var DoubleBounceComponent = (function (_super) {
+    __extends(DoubleBounceComponent, _super);
     function DoubleBounceComponent() {
-        this.visible = true;
-        this.delay = 0;
+        var _this = _super !== null && _super.apply(this, arguments) || this;
+        _this.baseClass = 'double-bounce-spinner';
+        _this.childClass = 'double-bounce';
+        _this.numItems = 2;
+        return _this;
     }
-    Object.defineProperty(DoubleBounceComponent.prototype, "isRunning", {
-        set: function (value) {
-            var _this = this;
-            if (!value) {
-                this.cancel();
-                this.visible = false;
-                return;
-            }
-            if (this.timeout) {
-                return;
-            }
-            this.timeout = setTimeout(function () {
-                _this.visible = true;
-                _this.cancel();
-            }, this.delay);
-        },
-        enumerable: true,
-        configurable: true
-    });
-    DoubleBounceComponent.prototype.cancel = function () {
-        clearTimeout(this.timeout);
-        this.timeout = undefined;
-    };
-    DoubleBounceComponent.prototype.ngOnDestroy = function () {
-        this.cancel();
-    };
     return DoubleBounceComponent;
-}());
-__decorate([
-    core_1.Input(),
-    __metadata("design:type", Number)
-], DoubleBounceComponent.prototype, "delay", void 0);
-__decorate([
-    core_1.Input(),
-    __metadata("design:type", Boolean),
-    __metadata("design:paramtypes", [Boolean])
-], DoubleBounceComponent.prototype, "isRunning", null);
+}(spinner_component_1.SpinnerComponent));
 DoubleBounceComponent = __decorate([
     core_1.Component({
         selector: 'sk-double-bounce',
-        styles: ["\n    .double-bounce-spinner {\n      position: relative;\n      margin: 25px auto;\n      width: 40px;\n      height: 40px;\n    }\n    \n    .double-bounce1,\n    .double-bounce2 {\n      position: absolute;\n      top: 0;\n      left: 0;\n      width: 100%;\n      height: 100%;\n      border-radius: 50%;\n      background-color: #333;\n      opacity: 0.6;\n    \n      -webkit-animation: sk-bounce 2.0s infinite ease-in-out;\n      animation: sk-bounce 2.0s infinite ease-in-out;\n    }\n    \n    .double-bounce2 {\n      -webkit-animation-delay: -1.0s;\n      animation-delay: -1.0s;\n    }\n    \n    @-webkit-keyframes sk-bounce {\n      0%, 100% {\n        -webkit-transform: scale(0.0)\n      }\n      50% {\n        -webkit-transform: scale(1.0)\n      }\n    }\n    \n    @keyframes sk-bounce {\n      0%, 100% {\n        transform: scale(0.0);\n        -webkit-transform: scale(0.0);\n      }\n      50% {\n        transform: scale(1.0);\n        -webkit-transform: scale(1.0);\n      }\n    }\n  "],
-        template: "\n    <div [hidden]=\"!visible\" class=\"double-bounce-spinner\">\n      <div class=\"double-bounce1\"></div>\n      <div class=\"double-bounce2\"></div>\n    </div>\n  "
+        styles: ["\n    .double-bounce-spinner {\n      position: relative;\n      margin: 25px auto;\n      width: 40px;\n      height: 40px;\n    }\n    \n    .double-bounce1,\n    .double-bounce2 {\n      position: absolute;\n      top: 0;\n      left: 0;\n      width: 100%;\n      height: 100%;\n      border-radius: 50%;\n      opacity: 0.6;\n    \n      -webkit-animation: sk-bounce 2.0s infinite ease-in-out;\n      animation: sk-bounce 2.0s infinite ease-in-out;\n    }\n    \n    .double-bounce2 {\n      -webkit-animation-delay: -1.0s;\n      animation-delay: -1.0s;\n    }\n    \n    @-webkit-keyframes sk-bounce {\n      0%, 100% {\n        -webkit-transform: scale(0.0)\n      }\n      50% {\n        -webkit-transform: scale(1.0)\n      }\n    }\n    \n    @keyframes sk-bounce {\n      0%, 100% {\n        transform: scale(0.0);\n        -webkit-transform: scale(0.0);\n      }\n      50% {\n        transform: scale(1.0);\n        -webkit-transform: scale(1.0);\n      }\n    }\n  "],
+        template: spinner_component_1.SpinnerTemplate
     })
 ], DoubleBounceComponent);
 exports.DoubleBounceComponent = DoubleBounceComponent;

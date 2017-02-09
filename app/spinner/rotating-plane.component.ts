@@ -1,4 +1,5 @@
-import { Component, Input, OnDestroy } from "@angular/core";
+import { Component } from "@angular/core";
+import { SpinnerComponent, SpinnerTemplate } from './spinner.component';
 
 @Component({
   selector: 'sk-rotating-plane',
@@ -7,7 +8,6 @@ import { Component, Input, OnDestroy } from "@angular/core";
       margin: 25px auto;
       width: 40px;
       height: 40px;
-      background-color: #333;
     
       -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
       animation: sk-rotateplane 1.2s infinite ease-in-out;
@@ -41,41 +41,10 @@ import { Component, Input, OnDestroy } from "@angular/core";
     }
   `],
   template: `
-    <div [hidden]="!visible" class="rotating-plane-spinner"></div>
+    <div [hidden]="!visible" class="rotating-plane-spinner" [style.backgroundColor]="color"></div>
   `
 })
 
-export class RotatingPlaneComponent implements OnDestroy {
-  private visible: boolean = true;
-  private timeout: any;
+export class RotatingPlaneComponent extends SpinnerComponent {
 
-  @Input()
-  public delay: number = 0;
-
-  @Input()
-  public set isRunning(value: boolean) {
-    if (!value) {
-      this.cancel();
-      this.visible = false;
-      return;
-    }
-
-    if (this.timeout) {
-      return;
-    }
-
-    this.timeout = setTimeout(() => {
-      this.visible = true;
-      this.cancel();
-    }, this.delay);
-  }
-
-  private cancel(): void {
-    clearTimeout(this.timeout);
-    this.timeout = undefined;
-  }
-
-  ngOnDestroy(): any {
-    this.cancel();
-  }
 }

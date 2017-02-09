@@ -1,4 +1,5 @@
-import { Component, Input, OnDestroy } from "@angular/core";
+import { Component } from "@angular/core";
+import { SpinnerComponent, SpinnerTemplate } from './spinner.component';
 
 @Component({
   selector: 'sk-three-bounce',
@@ -14,7 +15,6 @@ import { Component, Input, OnDestroy } from "@angular/core";
       height: 18px;
     
       border-radius: 100%;
-      background-color: #333;
       -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
       animation: sk-bouncedelay 1.4s infinite ease-in-out both;
     }
@@ -49,46 +49,11 @@ import { Component, Input, OnDestroy } from "@angular/core";
       }
     }
   `],
-  template: `
-    <div [hidden]="!visible" class="three-bounce-spinner">
-      <div class="bounce1"></div>
-      <div class="bounce2"></div>
-      <div class="bounce3"></div>
-    </div>
-  `
+  template: SpinnerTemplate
 })
 
-export class ThreeBounceComponent implements OnDestroy {
-  private visible: boolean = true;
-  private timeout: any;
-
-  @Input()
-  public delay: number = 0;
-
-  @Input()
-  public set isRunning(value: boolean) {
-    if (!value) {
-      this.cancel();
-      this.visible = false;
-      return;
-    }
-
-    if (this.timeout) {
-      return;
-    }
-
-    this.timeout = setTimeout(() => {
-      this.visible = true;
-      this.cancel();
-    }, this.delay);
-  }
-
-  private cancel(): void {
-    clearTimeout(this.timeout);
-    this.timeout = undefined;
-  }
-
-  ngOnDestroy(): any {
-    this.cancel();
-  }
+export class ThreeBounceComponent extends SpinnerComponent {
+  public baseClass: string = 'three-bounce-spinner';
+  public childClass: string = 'bounce';
+  public numItems: number = 3;
 }

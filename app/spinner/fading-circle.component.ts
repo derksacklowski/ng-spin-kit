@@ -1,4 +1,5 @@
-import { Component, Input, OnDestroy } from "@angular/core";
+import { Component } from "@angular/core";
+import { SpinnerComponent, SpinnerTemplate } from './spinner.component';
 
 @Component({
   selector: 'sk-fading-circle',
@@ -10,15 +11,16 @@ import { Component, Input, OnDestroy } from "@angular/core";
       height: 40px;
     }
     
-    .fading-circle-spinner .circle {
+    .fading-circle-spinner div {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
+      background-color: transparent !important;
     }
     
-    .fading-circle-spinner .circle:before {
+    .fading-circle-spinner div:before {
       display: block;
       margin: 0 auto;
       width: 15%;
@@ -169,55 +171,11 @@ import { Component, Input, OnDestroy } from "@angular/core";
       }
     }
   `],
-  template: `
-    <div [hidden]="!visible" class="fading-circle-spinner">
-      <div class="circle1 circle"></div>
-      <div class="circle2 circle"></div>
-      <div class="circle3 circle"></div>
-      <div class="circle4 circle"></div>
-      <div class="circle5 circle"></div>
-      <div class="circle6 circle"></div>
-      <div class="circle7 circle"></div>
-      <div class="circle8 circle"></div>
-      <div class="circle9 circle"></div>
-      <div class="circle10 circle"></div>
-      <div class="circle11 circle"></div>
-      <div class="circle12 circle"></div>
-    </div>
-  `
+  template: SpinnerTemplate
 })
 
-export class FadingCircleComponent implements OnDestroy {
-  private visible: boolean = true;
-  private timeout: any;
-
-  @Input()
-  public delay: number = 0;
-
-  @Input()
-  public set isRunning(value: boolean) {
-    if (!value) {
-      this.cancel();
-      this.visible = false;
-      return;
-    }
-
-    if (this.timeout) {
-      return;
-    }
-
-    this.timeout = setTimeout(() => {
-      this.visible = true;
-      this.cancel();
-    }, this.delay);
-  }
-
-  private cancel(): void {
-    clearTimeout(this.timeout);
-    this.timeout = undefined;
-  }
-
-  ngOnDestroy(): any {
-    this.cancel();
-  }
+export class FadingCircleComponent extends SpinnerComponent {
+  public baseClass: string = 'fading-circle-spinner';
+  public childClass: string = 'circle';
+  public numItems: number = 12;
 }

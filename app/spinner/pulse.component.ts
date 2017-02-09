@@ -1,4 +1,5 @@
-import { Component, Input, OnDestroy } from "@angular/core";
+import { Component } from "@angular/core";
+import { SpinnerComponent, SpinnerTemplate } from './spinner.component';
 
 @Component({
   selector: 'sk-pulse',
@@ -9,7 +10,6 @@ import { Component, Input, OnDestroy } from "@angular/core";
       height: 40px;
       border-radius: 100%;
     
-      background-color: #333;
       -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
       animation: sk-scaleout 1.0s infinite ease-in-out;
     }
@@ -37,41 +37,10 @@ import { Component, Input, OnDestroy } from "@angular/core";
     }
   `],
   template: `
-    <div [hidden]="!visible" class="pulse-spinner"></div>
+    <div [hidden]="!visible" class="pulse-spinner" [style.backgroundColor]="color"></div>
   `
 })
 
-export class PulseComponent implements OnDestroy {
-  private visible: boolean = true;
-  private timeout: any;
+export class PulseComponent extends SpinnerComponent {
 
-  @Input()
-  public delay: number = 0;
-
-  @Input()
-  public set isRunning(value: boolean) {
-    if (!value) {
-      this.cancel();
-      this.visible = false;
-      return;
-    }
-
-    if (this.timeout) {
-      return;
-    }
-
-    this.timeout = setTimeout(() => {
-      this.visible = true;
-      this.cancel();
-    }, this.delay);
-  }
-
-  private cancel(): void {
-    clearTimeout(this.timeout);
-    this.timeout = undefined;
-  }
-
-  ngOnDestroy(): any {
-    this.cancel();
-  }
 }
