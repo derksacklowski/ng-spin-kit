@@ -98,6 +98,10 @@ Inspired by angular-spinkit (https://github.com/Urigo/angular-spinkit)
   [delay]: number - representing the milliseconds to wait, before showing the spinner, default: 0
   ```
   
+  ```
+  [color]: string - background color for each item
+  ```
+  
 #### You can generate JavaScript code based on TypeScript by:
   ```bash
   npm run tsc
