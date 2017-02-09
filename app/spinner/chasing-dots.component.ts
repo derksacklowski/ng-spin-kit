@@ -9,7 +9,7 @@ import { SpinnerComponent, SpinnerTemplate } from './spinner.component';
       margin: 25px auto;
       width: 40px;
       height: 40px;
-    
+      
       -webkit-animation: sk-rotate 2.0s infinite linear;
       animation: sk-rotate 2.0s infinite linear;
     }
@@ -22,7 +22,7 @@ import { SpinnerComponent, SpinnerTemplate } from './spinner.component';
       width: 60%;
       height: 60%;
       border-radius: 100%;
-    
+      
       -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
       animation: sk-bounce 2.0s infinite ease-in-out;
     }

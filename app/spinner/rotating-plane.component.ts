@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { SpinnerComponent, SpinnerTemplate } from './spinner.component';
+import { SpinnerComponent } from './spinner.component';
 
 @Component({
   selector: 'sk-rotating-plane',
@@ -8,7 +8,7 @@ import { SpinnerComponent, SpinnerTemplate } from './spinner.component';
       margin: 25px auto;
       width: 40px;
       height: 40px;
-    
+      
       -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
       animation: sk-rotateplane 1.2s infinite ease-in-out;
     }
@@ -45,6 +45,4 @@ import { SpinnerComponent, SpinnerTemplate } from './spinner.component';
   `
 })
 
-export class RotatingPlaneComponent extends SpinnerComponent {
-
-}
+export class RotatingPlaneComponent extends SpinnerComponent {}

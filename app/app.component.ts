@@ -22,40 +22,40 @@ import { Component, OnInit } from '@angular/core';
   template: `
     <div class="wrapper">
       <h1>ng-spin-kit</h1>
-    
+      
       <h3>rotating-plane</h3>
       <sk-rotating-plane></sk-rotating-plane>
-    
+      
       <h3>double-bounce</h3>
       <sk-double-bounce [color]="'green'"></sk-double-bounce>
-    
+      
       <h3>wave</h3>
       <sk-wave [color]="'#00688B'"></sk-wave>
-    
+      
       <h3>wandering-cubes</h3>
       <sk-wandering-cubes></sk-wandering-cubes>
-    
+      
       <h3>pulse</h3>
       <sk-pulse [color]="'red'"></sk-pulse>
-    
+      
       <h3>chasing-dots</h3>
       <sk-chasing-dots></sk-chasing-dots>
-    
+      
       <h3>circle</h3>
       <sk-circle></sk-circle>
-    
+      
       <h3>three-bounce</h3>
       <sk-three-bounce></sk-three-bounce>
-    
+      
       <h3>cube-grid</h3>
       <sk-cube-grid></sk-cube-grid>
-    
+      
       <h3>word-press</h3>
       <sk-word-press></sk-word-press>
-    
+      
       <h3>fading-circle</h3>
       <sk-fading-circle></sk-fading-circle>
-    
+      
       <h3>folding-cube</h3>
       <sk-folding-cube></sk-folding-cube>
     </div>

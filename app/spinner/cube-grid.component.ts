@@ -14,7 +14,7 @@ import { SpinnerComponent, SpinnerTemplate } from './spinner.component';
       float: left;
       width: 33%;
       height: 33%;
-    
+      
       -webkit-animation: cubeGridScaleDelay 1.3s infinite ease-in-out;
       animation: cubeGridScaleDelay 1.3s infinite ease-in-out;
     }

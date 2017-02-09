@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { SpinnerComponent, SpinnerTemplate } from './spinner.component';
+import { SpinnerComponent } from './spinner.component';
 
 @Component({
   selector: 'sk-pulse',
@@ -9,7 +9,7 @@ import { SpinnerComponent, SpinnerTemplate } from './spinner.component';
       width: 40px;
       height: 40px;
       border-radius: 100%;
-    
+      
       -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
       animation: sk-scaleout 1.0s infinite ease-in-out;
     }
@@ -41,6 +41,4 @@ import { SpinnerComponent, SpinnerTemplate } from './spinner.component';
   `
 })
 
-export class PulseComponent extends SpinnerComponent {
-
-}
+export class PulseComponent extends SpinnerComponent {}

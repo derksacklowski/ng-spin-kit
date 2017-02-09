@@ -9,7 +9,7 @@ import { SpinnerComponent, SpinnerTemplate } from './spinner.component';
       margin: 25px auto;
       width: 40px;
       height: 40px;
-    
+      
       -webkit-transform: rotateZ(45deg);
       transform: rotateZ(45deg);
     }

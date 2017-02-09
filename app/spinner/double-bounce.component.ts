@@ -20,7 +20,7 @@ import { SpinnerComponent, SpinnerTemplate } from './spinner.component';
       height: 100%;
       border-radius: 50%;
       opacity: 0.6;
-    
+      
       -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
       animation: sk-bounce 2.0s infinite ease-in-out;
     }

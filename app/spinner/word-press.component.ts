@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { SpinnerComponent, SpinnerTemplate } from './spinner.component';
+import { SpinnerComponent } from './spinner.component';
 
 @Component({
   selector: 'sk-word-press',
@@ -10,7 +10,7 @@ import { SpinnerComponent, SpinnerTemplate } from './spinner.component';
       width: 30px;
       height: 30px;
       border-radius: 30px;
-    
+      
       -webkit-animation: inner-circle 1s linear infinite;
       animation: inner-circle 1s linear infinite;
     }
@@ -53,6 +53,4 @@ import { SpinnerComponent, SpinnerTemplate } from './spinner.component';
   `
 })
 
-export class WordPressComponent extends SpinnerComponent {
-
-}
+export class WordPressComponent extends SpinnerComponent {}

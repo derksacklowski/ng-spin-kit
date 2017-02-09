@@ -13,7 +13,7 @@ import { SpinnerComponent, SpinnerTemplate } from './spinner.component';
       display: inline-block;
       width: 18px;
       height: 18px;
-    
+      
       border-radius: 100%;
       -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
       animation: sk-bouncedelay 1.4s infinite ease-in-out both;

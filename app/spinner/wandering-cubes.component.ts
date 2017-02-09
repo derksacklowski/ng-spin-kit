@@ -18,7 +18,7 @@ import { SpinnerComponent, SpinnerTemplate } from './spinner.component';
       left: 0;
       width: 15px;
       height: 15px;
-    
+      
       -webkit-animation: sk-cubemove 1.8s infinite ease-in-out;
       animation: sk-cubemove 1.8s infinite ease-in-out;
     }

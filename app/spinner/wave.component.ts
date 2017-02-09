@@ -15,7 +15,7 @@ import { SpinnerComponent, SpinnerTemplate } from './spinner.component';
       width: 5px;
       margin-right: 4px;
       height: 100%;
-    
+      
       -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
       animation: sk-stretchdelay 1.2s infinite ease-in-out;
     }
@@ -23,7 +23,7 @@ import { SpinnerComponent, SpinnerTemplate } from './spinner.component';
     .wave-spinner > div:last-child {
       margin-right: 0;
     }
-
+    
     .wave-spinner .rect2 {
       -webkit-animation-delay: -1.1s;
       animation-delay: -1.1s;
