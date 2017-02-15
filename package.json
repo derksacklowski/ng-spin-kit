@@ -1,7 +1,7 @@
 {
   "name": "ng-spin-kit",
   "version": "4.0.0",
-  "description": "SpinKit (http://tobiasahlin.com/spinkit/) spinners for AngularJS 2.x",
+  "description": "SpinKit (http://tobiasahlin.com/spinkit/) spinners for Angular",
   "repository": {
     "type": "git",
     "url": "https://github.com/WoltersKluwerPL/ng-spin-kit"
