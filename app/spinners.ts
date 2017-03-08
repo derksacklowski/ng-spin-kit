@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 
 import { SpinnerComponent } from './spinner/spinner.component'
 import { RotatingPlaneComponent } from './spinner/rotating-plane.component'
@@ -49,7 +49,7 @@ const NG_SPIN_KIT_COMPONENTS = [
 
 @NgModule({
   imports: [
-    BrowserModule
+    CommonModule
   ],
   declarations: NG_SPIN_KIT_COMPONENTS,
   exports: NG_SPIN_KIT_COMPONENTS,
