@@ -5,3 +5,6 @@ tmp
 .DS_Store
 .idea
 *.iml
+app/**/*.js*
+app/**/*.d.ts
+app/**/*.ngfactory.ts
