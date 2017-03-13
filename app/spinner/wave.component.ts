@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component } from '@angular/core';
 import { SpinnerComponent, SpinnerTemplate } from './spinner.component';
 
 @Component({
@@ -46,10 +46,10 @@ import { SpinnerComponent, SpinnerTemplate } from './spinner.component';
     
     @-webkit-keyframes sk-stretchdelay {
       0%, 40%, 100% {
-        -webkit-transform: scaleY(0.4)
+        -webkit-transform: scaleY(0.4);
       }
       20% {
-        -webkit-transform: scaleY(1.0)
+        -webkit-transform: scaleY(1.0);
       }
     }
     

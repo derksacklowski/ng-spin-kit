@@ -1,13 +1,12 @@
-import { Component, Input, OnDestroy } from "@angular/core";
+import { Component, Input, OnDestroy } from '@angular/core';
 
 @Component({
   selector: 'spinner',
-  template: ``
+  template: ''
 })
 export class SpinnerComponent implements OnDestroy {
-  private visible: boolean = true;
-  private timeout: any;
-  
+  public visible: boolean = true;
+  public timeout: any;
   public baseClass: string = 'chasing-dots-spinner';
   public childClass: string = 'dot';
   public numItems: number = 2;

@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component } from '@angular/core';
 import { SpinnerComponent, SpinnerTemplate } from './spinner.component';
 
 @Component({
@@ -30,16 +30,16 @@ import { SpinnerComponent, SpinnerTemplate } from './spinner.component';
     
     @-webkit-keyframes sk-cubemove {
       25% {
-        -webkit-transform: translateX(42px) rotate(-90deg) scale(0.5)
+        -webkit-transform: translateX(42px) rotate(-90deg) scale(0.5);
       }
       50% {
-        -webkit-transform: translateX(42px) translateY(42px) rotate(-180deg)
+        -webkit-transform: translateX(42px) translateY(42px) rotate(-180deg);
       }
       75% {
-        -webkit-transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5)
+        -webkit-transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
       }
       100% {
-        -webkit-transform: rotate(-360deg)
+        -webkit-transform: rotate(-360deg);
       }
     }
     

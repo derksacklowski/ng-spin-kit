@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component } from '@angular/core';
 import { SpinnerComponent } from './spinner.component';
 
 @Component({
@@ -16,7 +16,7 @@ import { SpinnerComponent } from './spinner.component';
     
     @-webkit-keyframes sk-scaleout {
       0% {
-        -webkit-transform: scale(0)
+        -webkit-transform: scale(0);
       }
       100% {
         -webkit-transform: scale(1.0);

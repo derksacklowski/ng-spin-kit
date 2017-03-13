@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component } from '@angular/core';
 import { SpinnerComponent, SpinnerTemplate } from './spinner.component';
 
 @Component({
@@ -36,23 +36,23 @@ import { SpinnerComponent, SpinnerTemplate } from './spinner.component';
     
     @-webkit-keyframes sk-rotate {
       100% {
-        -webkit-transform: rotate(360deg)
+        -webkit-transform: rotate(360deg);
       }
     }
     
     @keyframes sk-rotate {
       100% {
         transform: rotate(360deg);
-        -webkit-transform: rotate(360deg)
+        -webkit-transform: rotate(360deg);
       }
     }
     
     @-webkit-keyframes sk-bounce {
       0%, 100% {
-        -webkit-transform: scale(0.0)
+        -webkit-transform: scale(0.0);
       }
       50% {
-        -webkit-transform: scale(1.0)
+        -webkit-transform: scale(1.0);
       }
     }
     

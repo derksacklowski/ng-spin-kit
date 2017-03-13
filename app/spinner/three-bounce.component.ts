@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component } from '@angular/core';
 import { SpinnerComponent, SpinnerTemplate } from './spinner.component';
 
 @Component({
@@ -31,10 +31,10 @@ import { SpinnerComponent, SpinnerTemplate } from './spinner.component';
     
     @-webkit-keyframes sk-bouncedelay {
       0%, 80%, 100% {
-        -webkit-transform: scale(0)
+        -webkit-transform: scale(0);
       }
       40% {
-        -webkit-transform: scale(1.0)
+        -webkit-transform: scale(1.0);
       }
     }
     

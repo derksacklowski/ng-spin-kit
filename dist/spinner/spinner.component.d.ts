@@ -1,7 +1,7 @@
-import { OnDestroy } from "@angular/core";
+import { OnDestroy } from '@angular/core';
 export declare class SpinnerComponent implements OnDestroy {
-    private visible;
-    private timeout;
+    visible: boolean;
+    timeout: any;
     baseClass: string;
     childClass: string;
     numItems: number;
