@@ -1,6 +1,6 @@
 {
   "name": "ng-spin-kit",
-  "version": "5.1.0",
+  "version": "5.1.1",
   "description": "SpinKit (http://tobiasahlin.com/spinkit/) spinners for Angular",
   "repository": {
     "type": "git",
@@ -27,7 +27,6 @@
     "@angular/core": "^2.0.0",
     "@angular/platform-browser": "^2.0.0",
     "@angular/platform-browser-dynamic": "^2.0.0",
-    "@types/core-js": "0.9.35",
     "@types/node": "7.0.5",
     "concurrently": "3.3.0",
     "core-js": "2.4.1",
