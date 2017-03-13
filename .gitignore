@@ -6,5 +6,7 @@ tmp
 .idea
 *.iml
 app/**/*.js*
+!app/tsconfig.json
 app/**/*.d.ts
 app/**/*.ngfactory.ts
+aot
