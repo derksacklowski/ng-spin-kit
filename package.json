@@ -1,41 +1,41 @@
 {
-  "name": "ng-spin-kit",
-  "version": "5.1.1",
-  "description": "SpinKit (http://tobiasahlin.com/spinkit/) spinners for Angular",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/WoltersKluwerPL/ng-spin-kit"
-  },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://github.com/WoltersKluwerPL/ng-spin-kit/blob/master/LICENSE"
+    "name": "@flyacts/ng-spin-kit",
+    "version": "6.0.0",
+    "description": "SpinKit (http://tobiasahlin.com/spinkit/) spinners for Angular",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/WoltersKluwerPL/ng-spin-kit"
+    },
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "https://github.com/WoltersKluwerPL/ng-spin-kit/blob/master/LICENSE"
+        }
+    ],
+    "scripts": {
+        "start": "npm run build && concurrently \"tsc -w\" \"lite-server\"",
+        "ngc": "ngc",
+        "build": "rm -rf dist && ngc -p app",
+        "prepublish": "npm run build"
+    },
+    "main": "dist/spinners.js",
+    "typings": "dist/spinners.d.ts",
+    "devDependencies": {
+        "@angular/common": "^4.2.4",
+        "@angular/compiler": "^4.2.4",
+        "@angular/compiler-cli": "^4.2.4",
+        "@angular/core": "^4.2.4",
+        "@angular/platform-browser": "^4.2.4",
+        "@angular/platform-browser-dynamic": "^4.2.4",
+        "@types/node": "7.0.5",
+        "concurrently": "3.3.0",
+        "core-js": "2.4.1",
+        "lite-server": "2.2.2",
+        "reflect-metadata": "0.1.9",
+        "rxjs": "5.1.1",
+        "systemjs": "0.20.7",
+        "ts-loader": "2.0.0",
+        "typescript": "2.1.6",
+        "zone.js": "0.7.7"
     }
-  ],
-  "scripts": {
-    "start": "npm run build && concurrently \"tsc -w\" \"lite-server\"",
-    "ngc": "ngc",
-    "build": "rm -rf dist && ngc -p app",
-    "prepublish": "npm run build"
-  },
-  "main": "dist/spinners.js",
-  "typings": "dist/spinners.d.ts",
-  "devDependencies": {
-    "@angular/common": "^2.0.0",
-    "@angular/compiler": "^2.0.0",
-    "@angular/compiler-cli": "^2.0.0",
-    "@angular/core": "^2.0.0",
-    "@angular/platform-browser": "^2.0.0",
-    "@angular/platform-browser-dynamic": "^2.0.0",
-    "@types/node": "7.0.5",
-    "concurrently": "3.3.0",
-    "core-js": "2.4.1",
-    "lite-server": "2.2.2",
-    "reflect-metadata": "0.1.9",
-    "rxjs": "5.1.1",
-    "systemjs": "0.20.7",
-    "ts-loader": "2.0.0",
-    "typescript": "2.1.6",
-    "zone.js": "0.7.7"
-  }
 }
